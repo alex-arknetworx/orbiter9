@@ -1,0 +1,9 @@
+</$objtype/mkfile
+
+BIN=$home/bin/$objtype
+
+TARG=nuvoton9
+
+OFILES=nuvoton9.$O \
+
+</sys/src/cmd/mkone
