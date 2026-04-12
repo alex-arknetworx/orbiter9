@@ -1,11 +1,14 @@
 # BIN_ROM
 
-nuvoton9 takes a .bin file and flashes it via the 'in circuit programming' ICP interface of Nuvoton MCUs to APROM.
+nuvoton9 takes a .bin file and flashes it via the ICP (in circuit programming) interface of Nuvoton MCUs to internal APROM.
 
-The tool is designed to run on a Raspberry Pi and uses GPIO 0, 1 and 5 to emulate an ICP interface (DATA, CLOCK, RESET). The source code makes use of the built in RPi GPIO driver in 9Front.
-Running the tool without a .bin file reference will return the connected MCU Device ID information.
+The nuvoton9 tool is designed to run on a Raspberry Pi and uses what 9Front refers to as GPIO 0, 1 and 5 to emulate an ICP interface (DATA, CLOCK, RESET). The source code makes use of the 9Front built in RPi GPIO driver. Running the tool without passing a .bin file reference will return the connected MCU's Device ID instead. Refer to the ICP wiring diagram below as GPIO numbers and pins can be different in 9Front.
 
-sblink.bin and fblink.bin have been included for testing. Both .bin files blink an LED connected to P2.1 either slow or fast.
+sblink.bin and fblink.bin are included for testing. Both files blink an LED connected to MCU port P2.1 either slow or fast.
+
+To view the contents of .bin files on 9Front, i recommend Phil9's Vexed tool: https://github.com/telephil9/vexed
+
+sblink.bin and fblink.bin were generated on 9Front using the forthcoming ASM_HEX and HEX_BIN tools.
 
 Build:
 
@@ -16,3 +19,7 @@ mk install
 Usage:
 
 nuvoton9 sblink.bin
+
+ICP Wiring and LED Wiring:
+
+![nuvoton9_icp_wiring](https://github.com/user-attachments/assets/3fe61e2a-2db0-470e-9cd7-cc584e5fe6be)
