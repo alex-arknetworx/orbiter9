@@ -10,6 +10,7 @@ sblink.bin and fblink.bin have been included for testing. Both .bin files blink 
 Build:
 
 mk
+
 mk install
 
 Usage:
